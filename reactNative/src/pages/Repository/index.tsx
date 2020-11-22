@@ -36,7 +36,7 @@ const Repository: React.FC = () => {
       setRepositories(response.data);
     }
     loadRepositories();
-  }, [])
+  }, [user.name])
 
   return (
     <Container>

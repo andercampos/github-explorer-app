@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { View } from 'react-native';
+import { View, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import { useAuth } from '../../hooks/auth';
@@ -31,7 +31,9 @@ const Header: React.FC<IHeaderProps> = ({ login, avatar_url, isProfile }) => {
         login,
       });
 
-      navigation.navigate('Home');
+      Alert.alert(
+        `Usuário alterado para ${login}`,
+      );
     }   
   }, [signIn]);
 
